@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Eduford</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('courses')">Courses</a></li>
+                <li><a href="#" onclick="showPage('profile')">Profile</a></li>
+                <li><a href="#" onclick="showPage('register')">Register</a></li>
+                <li><a href="#" onclick="showPage('admin')">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h2>Welcome to Our Learning Platform</h2>
+                <p>Enroll in courses, attend classes, take quizzes, and earn certificates.</p>
+                <a href="#" class="btn" onclick="showPage('courses')">Browse Courses</a>
+            </div>
+            <section class="features">
+                <div class="feature">
+                    <h3>Video Streaming</h3>
+                    <p>Access high-quality video lectures anytime, anywhere.</p>
+                </div>
+                <div class="feature">
+                    <h3>Interactive Quizzes</h3>
+                    <p>Test your knowledge with interactive quizzes.</p>
+                </div>
+                <div class="feature">
+                    <h3>Progress Tracking</h3>
+                    <p>Track your learning progress and achievements.</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Courses Page -->
+        <section id="courses" class="page">
+            <h2>Available Courses</h2>
+            <div class="course-list">
+                <!-- Courses will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile" class="page">
+            <h2>Your Profile</h2>
+            <div class="profile">
+                <p>Name: <span id="profile-name">John Doe</span></p>
+                <p>Email: <span id="profile-email">john.doe@example.com</span></p>
+                <p>Enrolled Courses: <span id="profile-courses">0</span></p>
+                <a href="#" class="btn" onclick="editProfile()">Edit Profile</a>
+            </div>
+        </section>
+
+        <!-- Registration Page -->
+        <section id="register" class="page">
+            <h2>User Registration</h2>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+
+        <!-- Admin Page -->
+        <section id="admin" class="page">
+            <h2>Admin Dashboard</h2>
+            <div class="admin-dashboard">
+                <div class="dashboard-item">
+                    <h3>Manage Courses</h3>
+                    <a href="#" class="btn" onclick="viewCourses()">View Courses</a>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Manage Users</h3>
+                    <a href="#" class="btn" onclick="viewUsers()">View Users</a>
+                </div>
+            </div>
+            <div id="admin-content" style="display:none;">
+                <h3 id="admin-heading"></h3>
+                <ul id="admin-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eduford. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
